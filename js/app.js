@@ -1,6 +1,8 @@
 //const setTaskInterval = setInterval(getIceForDriveThru, 5000);
 let countDown = 20;
 console.log(countDown)
+renderCounter();
+
 setInterval(updateTimer, 1000);
 
 function getIceForDriveThru() {
@@ -8,8 +10,8 @@ function getIceForDriveThru() {
 }
 
 function displaySuccessMessage() {
-    alert("Great job!");
-    //clearInterval(setTaskInterval);
+    countDown = 20;
+    renderCounter();
 }
 
 function updateTimer() {
@@ -17,4 +19,11 @@ function updateTimer() {
         countDown--;
         console.log(countDown);
     }
+
+    renderCounter();
+}
+
+function renderCounter() {
+    const counterElement = document.getElementById("counter");
+    counterElement.innerHTML = countDown;
 }
