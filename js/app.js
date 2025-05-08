@@ -32,9 +32,15 @@ function resetEmptyTrashCansCounter() {
     renderCounterEmptyTrashCans();
 }
 
-function displaySuccessMessage() {
+function displayceDriveThruSuccessMessage() {
     resetIceDriveThruCounter();
+}
+
+function displayDiningRoomSuccessMessage() {
     resetDiningRoomCounter();
+}
+
+function displayEmptyTrashCansSuccessMessage() {
     resetEmptyTrashCansCounter();
 }
 
