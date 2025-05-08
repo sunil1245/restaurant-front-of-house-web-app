@@ -3,6 +3,14 @@ const timers = [
     { id: "empty_trash_cah", duration: 30, label: "Empty the Trash Can" },
 ]
 
+/*
+    Arrays
+    Objects
+    forEach loop
+    Creating DOM elements via JavaScript
+    Appending elements to the document
+*/ 
+
 
 //const setTaskInterval = setInterval(getIceForDriveThru, 5000);
 let iceForDriveThruCountDown = 20;
