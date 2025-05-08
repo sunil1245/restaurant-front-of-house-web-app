@@ -1,3 +1,9 @@
+const timers = [
+    { id: "ice_to_drivethrough", duration: 30, label: "Take ice to drive through" },
+    { id: "empty_trash_cah", duration: 30, label: "Empty the Trash Can" },
+]
+
+
 //const setTaskInterval = setInterval(getIceForDriveThru, 5000);
 let iceForDriveThruCountDown = 20;
 let diningRoomCheckCountDown = 30;
