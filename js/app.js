@@ -32,8 +32,10 @@ setInterval(function() {
 
 
 function renderCounters(timers) {
+const timerContainer = document.getElementById('container');
+timerContainer.innerHTML = "";
     for (let i = 0; i < timers.length; i++) {
-        const timerContainer = document.getElementById('container');
+        
         timerContainer.innerHTML += 
         "<div class='timer-container'><div id='" + 
             timers[i].id + "'>" + 
@@ -50,11 +52,15 @@ function updateTimers(timers) {
         
         if (timers[i].duration > 0) {
             timers[i].duration--;
-            let timerCounter = document.getElementById(timers[i].id + '_counter');
-            timerCounter.innerText = timers[i].duration;
+            // let timerCounter = document.getElementById(timers[i].id + '_counter');
+            // timerCounter.innerText = timers[i].duration;
+
+
         }
         
     }
+renderCounters(timers);
+
 }
 
 
