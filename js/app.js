@@ -20,6 +20,8 @@ const timers = [
     Some timers would go away entirely based on the mode
 
     When adding a form, specify if it is for breakfast, lunch, dinner, all.
+
+    Progress circle with color change - red, amber, green
 */ 
 
 renderCounters(timers);
