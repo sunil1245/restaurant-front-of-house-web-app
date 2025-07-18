@@ -2,23 +2,24 @@ const timers = [
     { id: "ice_to_drivethrough", duration: 20, label: "Take ice to drive through" },
     { id: "dining_room_check", duration: 45, label: "Dining Room Check" },
     { id: "empty_trash_cans", duration: 30, label: "Empty the Trash Can" },
-    { id: "make_coffee", duration: 30, label: "Make Coffee" },
-
+    // { id: "make_coffee", duration: 30, label: "Make Coffee" },
+{ id: "make_lemonade", duration: 50, label: "Make Lemonade" },
 ]
 
 /*
-    Get the timers to work. 
-    Need one loop that is running every second and every second it will take every timer that is active and decrement it by 1 - set Interval.
-    Single function for update timers. Every second it will get called. console.log
-
-    Every second look at every timer in the array and if the time is above zero, we want to decrement by 1. 
-    Update the UI by re-rendering the timer every time that happens. 
-
-
-    Stretch goal
     Each timer should have a button to reset
     When you click reset, it should reset it to the time
-    
+
+    Pause a timer
+
+    Add your own timer using a form
+
+    Allow users to delete timers
+
+    Toggle at the top - Breakfast, Lunch, Dinner
+    Some timers would go away entirely based on the mode
+
+    When adding a form, specify if it is for breakfast, lunch, dinner, all.
 */ 
 
 renderCounters(timers);
