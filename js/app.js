@@ -1,9 +1,9 @@
 const timers = [
-    { id: "ice_to_drivethrough", duration: 20, label: "Take ice to drive through" },
-    { id: "dining_room_check", duration: 45, label: "Dining Room Check" },
-    { id: "empty_trash_cans", duration: 30, label: "Empty the Trash Can" },
+    { id: "ice_to_drivethrough", startingDuration: 20, duration: 20, label: "Take ice to drive through" },
+    { id: "dining_room_check", startingDuration: 45, duration: 45, label: "Dining Room Check" },
+    { id: "empty_trash_cans", startingDuration: 30, duration: 30, label: "Empty the Trash Can" },
     // { id: "make_coffee", duration: 30, label: "Make Coffee" },
-    { id: "make_lemonade", duration: 50, label: "Make Lemonade" }   ,
+    { id: "make_lemonade", startingDuration: 50, duration: 50, label: "Make Lemonade" }   ,
 ]
 
 /*
@@ -61,10 +61,8 @@ function renderResetButtons(timers) {
         const index = parseInt(resetButton.getAttribute('data-index'));
 
             if (resetButton && container.contains(resetButton)) {
-
-                originalDuration = timers[index].duration;
-                timers[index].duration = 0;
-                timers[index].duration = originalDuration;
+                timers[index].duration = timers[index].startingDuration;
+                renderCounters(timers);
             }
         });
 
